@@ -1,6 +1,7 @@
 import { hot } from 'react-hot-loader/root'
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
+import 'normalize.css'
 
 import { Metas } from '~/components/Metas';
 import Favicon from '~/components/Favicon';
