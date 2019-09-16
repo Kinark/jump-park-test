@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
    body {
       background-color: ${colors.BG};
       font-size: 1.6rem;
+      color: ${colors.DARK_BLUE}
    }
 `
 
