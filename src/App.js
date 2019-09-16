@@ -8,6 +8,7 @@ import colors from '~/constants/colors'
 
 import { Metas } from '~/components/Metas'
 import Favicon from '~/components/Favicon'
+import VerticalAligner from '~/components/VerticalAligner'
 import AppRoutes from '~/components/AppRoutes'
 
 import ARLRDBD_0 from '~/fonts/ARLRDBD_0.woff'
@@ -17,7 +18,9 @@ const App = () => (
       <GlobalStyle />
       <Metas title="Sample Website" description="" />
       <Favicon />
-      <AppRoutes />
+      <VerticalAligner>
+         <AppRoutes />
+      </VerticalAligner>
    </BrowserRouter>
 )
 
@@ -30,9 +33,11 @@ const GlobalStyle = createGlobalStyle`
    }
    html {
       font-family: 'Arial Rounded MT Bold';
+      font-size: 10px;
    }
    body {
       background-color: ${colors.BG};
+      font-size: 1.6rem;
    }
 `
 
