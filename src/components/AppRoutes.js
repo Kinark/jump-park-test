@@ -1,15 +1,17 @@
 import React, { PureComponent } from 'react'
 import { Switch, Route } from 'react-router-dom';
 
+import PrivateRoute from '~/components/PrivateRoute';
+
 import Home from '~/views/Home';
-// import Component from '~/views/Component';
+import Login from '~/views/Login';
 
 export default class AppRoutes extends PureComponent {
    render() {
       return (
          <Switch>
-            <Route exact path="/" component={Home} />
-            {/* <Route exact path="/component" component={Component} /> */}
+            <PrivateRoute exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
          </Switch>
       )
    }
