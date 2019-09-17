@@ -12,6 +12,6 @@ export const requestSessionsLogErrored = payload => ({ type: REQUEST_SESSIONS_LO
 export const fetchSessionsLog = () => dispatch => {
    dispatch(requestSessionsLog())
    getSessionsLog()
-      .then(({ data }) => dispatch(receivedSessionsLog(data)))
-      .catch(() => dispatch(receivedSessionsLog(sessionsLog)))
+      .then(({ data }) => dispatch(receivedSessionsLog(data.data.content)))
+      .catch(() => dispatch(receivedSessionsLog(sessionsLog.data.content)))
 }
