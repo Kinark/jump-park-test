@@ -4,8 +4,8 @@ import colors from '~/constants/colors'
 
 export const ButtonBase = css`
    border-radius: 4px;
-   height: 24px;
-   line-height: 25px;
+   height: 28px;
+   line-height: 28px;
    background-color: ${colors.GREEN};
    color: #fff;
    text-align: center;
