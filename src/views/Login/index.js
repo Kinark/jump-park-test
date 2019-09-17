@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Redirect } from 'react-router-dom'
 
+import { Metas } from '~/components/Metas'
 import Input from '~/components/Input'
 import Button from '~/components/Button'
 import Card from '~/components/Card'
@@ -23,6 +24,7 @@ export default () => {
 
    return (
       <VerticalAligner>
+         <Metas title="Login - Jump Park Test" />
          <StyledCard>
             <ResponsiveImg src={myPassword} maxWidth="275" alt="Login Image" />
             <h3>Insira o ID do usuário</h3>

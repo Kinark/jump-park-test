@@ -16,7 +16,7 @@ import ARLRDBD_0 from '~/fonts/ARLRDBD_0.woff'
 const App = () => (
    <BrowserRouter>
       <GlobalStyle />
-      <Metas title="Sample Website" description="" />
+      <Metas title="Jump Park Test" />
       <Favicon />
       <main>
          <AppRoutes />
