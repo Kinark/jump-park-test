@@ -2,7 +2,8 @@ const initialStore = {
    sessionsLog: {
       data: [],
       loading: true,
-      error: ''
+      error: '',
+      offlineMode: false
    }
 }
 

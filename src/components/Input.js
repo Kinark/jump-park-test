@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import colors from '~/constants/colors';
+import colors from '~/constants/colors'
 
 export const InputBase = css`
    border-radius: 4px;
@@ -8,6 +8,10 @@ export const InputBase = css`
    border: solid 2px ${colors.DARK_BLUE};
    margin: 1rem;
    outline: none;
+   &::placeholder {
+      font-style: italic;
+      color: #CBD0D5;
+   }
 `
 
 const Input = styled.input`

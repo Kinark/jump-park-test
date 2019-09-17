@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { REQUEST_SESSIONS_LOG, RECEIVE_SESSIONS_LOG, REQUEST_SESSIONS_LOG_ERROR } from '../actions/sessionsLog'
+import { REQUEST_SESSIONS_LOG, RECEIVE_SESSIONS_LOG, REQUEST_SESSIONS_LOG_ERROR, REQUEST_SESSIONS_LOG_OFFLINE_MODE } from '../actions/sessionsLog'
 
 function data(state = [], action) {
    switch (action.type) {
@@ -31,8 +31,18 @@ function error(state = '', action) {
    }
 }
 
+function offlineMode(state = false, action) {
+   switch (action.type) {
+      case REQUEST_SESSIONS_LOG_OFFLINE_MODE:
+         return action.payload
+      default:
+         return state
+   }
+}
+
 export default combineReducers({
    data,
    loading,
-   error
+   error,
+   offlineMode
 })

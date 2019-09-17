@@ -18,7 +18,7 @@ import Input from '~/components/Input'
 import Container from '~/components/Container'
 import { Table, THead, TBody, Tr, Th, Td } from '~/components/Table'
 
-const Home = ({ dispatch, data, loading, error }) => {
+const Home = ({ dispatch, data, loading, error, offlineMode }) => {
    const [search, setSearch] = useState('')
    const [redirect, setRedirect] = useState(false)
    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -74,7 +74,10 @@ const Home = ({ dispatch, data, loading, error }) => {
                   </DropdownWrapper>
                   <Button onClick={logout}>Sair</Button>
                </div>
-               <Input type="text" placeholder="Pesquisar" value={search} onChange={e => setSearch(e.target.value)} onKeyDown={handleKeyDown} />
+               <div>
+                  {offlineMode && <OfflineMsg>Não conseguimos contatar a API. Você está no modo offline.</OfflineMsg>}
+                  <Input type="text" placeholder="Pesquisar" value={search} onChange={e => setSearch(e.target.value)} onKeyDown={handleKeyDown} />
+               </div>
             </CardActions>
             {!!error && error}
             {loading ? (
@@ -122,11 +125,23 @@ Home.propTypes = {
       })
    ).isRequired,
    loading: PropTypes.bool.isRequired,
-   error: PropTypes.string.isRequired
+   error: PropTypes.string.isRequired,
+   offlineMode: PropTypes.bool.isRequired
 }
 
-const mapStateToProps = ({ sessionsLog }) => ({ data: sessionsLog.data, loading: sessionsLog.loading, error: sessionsLog.error })
+const mapStateToProps = ({ sessionsLog }) => ({
+   data: sessionsLog.data,
+   loading: sessionsLog.loading,
+   error: sessionsLog.error,
+   offlineMode: sessionsLog.offlineMode
+})
 export default connect(mapStateToProps)(Home)
+
+const OfflineMsg = styled.span`
+   color: red;
+   font-style: italic;
+   font-size: 1.25rem;
+`
 
 const DropdownArrow = styled(MdKeyboardArrowDown)`
    transform: rotate(${({ isdropdownopen }) => (isdropdownopen ? 180 : 0)}deg);
