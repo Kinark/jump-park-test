@@ -1,5 +1,20 @@
-A not so dead-simple react/sass boilerplate.
+# Jump Park Test
+A test made for the JumpPark company.
 
+Online Demo (it won't get to connect to the API due to not enabled CORS):  
+[Click here](https://jump-park-test.netlify.com/)
+
+## Instructions to run locally:
+In order to run the project locally, you have to have the following prerequisites installed in your machine:
+- Node.js
+- NPM
+
+After that, follow the instructions:
+- Clone the project;
+- Run `npm i` to install the dependencies;
+- Run `npm start` to start the webpack server.
+
+## Info
 It cointains:
 
 ### **General:**
@@ -32,7 +47,6 @@ It cointains:
 * Prettier
 * Hot Module Replacement + React Hot Loader
 * Cheap Module Source Map
-* Webpack proxy: /ajax redirects to port localhost:8070
 * [Blueprint Templates](https://marketplace.visualstudio.com/items?itemName=teamchilla.blueprint) (VSCode)
 
 ### **Production:**
