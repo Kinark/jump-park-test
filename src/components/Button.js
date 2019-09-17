@@ -15,7 +15,7 @@ export const ButtonBase = css`
    opacity: 1;
    transition: opacity 300ms ease-out;
    outline: none;
-   margin: 1rem;
+   margin: ${({ noMrg }) => (noMrg ? '0' : '1rem')};
    &:hover {
       opacity: 0.75;
    }
