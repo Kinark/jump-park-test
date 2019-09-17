@@ -13,7 +13,8 @@ export default () => {
    const [userId, setUserId] = useState('')
    const [redirect, setRedirect] = useState(false)
 
-   const doLogin = () => {
+   const doLogin = e => {
+      e.preventDefault()
       localStorage.setItem('userId', userId)
       setRedirect(true)
    }
@@ -25,12 +26,19 @@ export default () => {
          <StyledCard>
             <ResponsiveImg src={myPassword} maxWidth="275" alt="Login Image" />
             <h3>Insira o ID do usuário</h3>
-            <Input type="number" placeholder="ID do usuário (1)" value={userId} onChange={e => setUserId(e.target.value)} />
-            <Button onClick={doLogin}>Entrar</Button>
+            <StyledForm onSubmit={doLogin}>
+               <Input required type="number" placeholder="ID do usuário (1)" value={userId} onChange={e => setUserId(e.target.value)} />
+               <Button type="submit">Entrar</Button>
+            </StyledForm>
          </StyledCard>
       </VerticalAligner>
    )
 }
+
+const StyledForm = styled.form`
+   display: flex;
+   flex-direction: column;
+`
 
 const StyledCard = styled(Card)`
    display: flex;
