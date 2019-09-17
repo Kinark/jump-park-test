@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root'
 import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import { BrowserRouter } from 'react-router-dom'
 import 'normalize.css'
 
