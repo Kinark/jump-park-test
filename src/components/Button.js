@@ -5,7 +5,9 @@ import colors from '~/constants/colors'
 export const ButtonBase = css`
    border-radius: 4px;
    height: 28px;
-   line-height: 28px;
+   display: inline-flex;
+   align-items: center;
+   vertical-align: middle;
    background-color: ${colors.GREEN};
    color: #fff;
    text-align: center;
