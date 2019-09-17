@@ -9,6 +9,7 @@ import colors from '~/constants/colors'
 import { Metas } from '~/components/Metas'
 import Favicon from '~/components/Favicon'
 import AppRoutes from '~/components/AppRoutes'
+import Footer from '~/components/Footer'
 
 import ARLRDBD_0 from '~/fonts/ARLRDBD_0.woff'
 
@@ -20,6 +21,7 @@ const App = () => (
       <main>
          <AppRoutes />
       </main>
+      <Footer />
    </BrowserRouter>
 )
 
