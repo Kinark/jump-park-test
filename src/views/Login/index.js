@@ -26,6 +26,7 @@ export default () => {
          <StyledCard>
             <ResponsiveImg src={myPassword} maxWidth="275" alt="Login Image" />
             <h3>Insira o ID do usuário</h3>
+            <p>Insira um número diferente de 1 para ver o modo offline.</p>
             <StyledForm onSubmit={doLogin}>
                <Input required type="number" placeholder="ID do usuário (1)" value={userId} onChange={e => setUserId(e.target.value)} />
                <Button type="submit">Entrar</Button>
@@ -45,6 +46,8 @@ const StyledCard = styled(Card)`
    flex-direction: column;
    padding: 2rem;
    text-align: center;
+   width: 90%;;
+   max-width: 320px;
 `
 
 const VerticalAligner = styled.div`
