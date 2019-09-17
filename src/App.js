@@ -17,9 +17,9 @@ const App = () => (
       <GlobalStyle />
       <Metas title="Sample Website" description="" />
       <Favicon />
-      <MainWrapper>
+      <main>
          <AppRoutes />
-      </MainWrapper>
+      </main>
    </BrowserRouter>
 )
 
@@ -39,15 +39,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 1.6rem;
       color: ${colors.DARK_BLUE}
    }
-`
-
-const MainWrapper = styled.main`
-   height: 100vh;
-   overflow: auto;
-   justify-content: flex-start;
-   align-items: center;
-   display: flex;
-   flex-direction: column;
 `
 
 export default hot(App)
