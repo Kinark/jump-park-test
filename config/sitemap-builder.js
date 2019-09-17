@@ -6,7 +6,7 @@ const Sitemap = require('react-router-sitemap').default
 const router = require('../src/components/AppRoutesSitemap')
 
 function generateSitemap() {
-   return new Sitemap(router).build('https://www.site.com/').save('./dist/sitemap.xml')
+   return new Sitemap(router).build('https://jump-park-test.netlify.com/').save('./dist/sitemap.xml')
 }
 
 generateSitemap()
