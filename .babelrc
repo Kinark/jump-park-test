@@ -9,7 +9,7 @@
       ],
       "@babel/preset-react"
    ],
-   "plugins": ["transform-class-properties", "add-module-exports", "react-hot-loader/babel, emotion"],
+   "plugins": ["transform-class-properties", "add-module-exports", "react-hot-loader/babel", "emotion"],
    "env": {
       "production": {
          "plugins": [
