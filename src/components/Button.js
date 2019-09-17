@@ -7,6 +7,7 @@ export const ButtonBase = css`
    height: 28px;
    display: inline-flex;
    align-items: center;
+   justify-content: center;
    vertical-align: middle;
    background-color: ${colors.GREEN};
    color: #fff;
