@@ -21,12 +21,14 @@ export default () => {
    if (localStorage.getItem('userId') || redirect) return <Redirect to="/" />
 
    return (
-      <StyledCard>
-         <ResponsiveImg src={myPassword} maxWidth="275" alt="Login Image" />
-         <h3>Insira o ID do usuário</h3>
-         <Input type="number" placeholder="ID do usuário (1)" value={userId} onChange={e => setUserId(e.target.value)} />
-         <Button onClick={doLogin}>Entrar</Button>
-      </StyledCard>
+      <VerticalAligner>
+         <StyledCard>
+            <ResponsiveImg src={myPassword} maxWidth="275" alt="Login Image" />
+            <h3>Insira o ID do usuário</h3>
+            <Input type="number" placeholder="ID do usuário (1)" value={userId} onChange={e => setUserId(e.target.value)} />
+            <Button onClick={doLogin}>Entrar</Button>
+         </StyledCard>
+      </VerticalAligner>
    )
 }
 
@@ -35,4 +37,13 @@ const StyledCard = styled(Card)`
    flex-direction: column;
    padding: 2rem;
    text-align: center;
+`
+
+const VerticalAligner = styled.div`
+   height: 100vh;
+   overflow: auto;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   flex-direction: column;
 `
