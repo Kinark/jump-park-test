@@ -1,7 +1,7 @@
 {
-   "name": "elara-boilerplate",
+   "name": "jump-park-test",
    "version": "1.0.0",
-   "description": "A dead-simple react/sass boilerplate.",
+   "description": "A test made for the JumpPark company.",
    "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "cross-env NODE_ENV=development webpack-dev-server --hot --host 0.0.0.0 --port 8080 --config ./config/webpack.dev.js",
