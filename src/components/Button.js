@@ -5,7 +5,7 @@ import colors from '~/constants/colors'
 export const ButtonBase = css`
    border-radius: 4px;
    height: 28px;
-   display: inline-flex;
+   display: ${({ block }) => (block ? 'flex' : 'inline-flex')};
    align-items: center;
    justify-content: center;
    vertical-align: middle;
