@@ -1,0 +1,7 @@
+{
+  "main.css": "/static/css/main.css",
+  "main.js": "/static/js/bundle.js",
+  "_redirects": "/_redirects",
+  "index.html": "/index.html",
+  "static/media/my-password.svg": "/static/media/d465d2e1479f63a94e204393262ca06f-my-password.svg"
+}
