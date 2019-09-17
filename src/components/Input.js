@@ -7,6 +7,7 @@ export const InputBase = css`
    height: 24px;
    border: solid 2px ${colors.DARK_BLUE};
    margin: 1rem;
+   outline: none;
 `
 
 const Input = styled.input`
